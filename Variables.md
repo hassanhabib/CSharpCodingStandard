@@ -110,7 +110,7 @@ Student student = GetStudent();
 var student = GetStudent();
 ```
 
-#### 0.1.2 Unclear Types 
+#### 0.1.2 Unclear Types
 
 If the right side isn't clear and unknown (such as an anonymous types) of the returned value type, you may use ```var``` as your variable type.
 
@@ -130,7 +130,7 @@ var student = new
 
 If a variable declaration exceeds 120 characters, break it down starting from the equal sign.
 
-###### Do
+##### Do
 
 ```cs
 List<Student> washgintonSchoolsStudentsWithGrades = 
@@ -138,7 +138,7 @@ List<Student> washgintonSchoolsStudentsWithGrades =
 
 ```
 
-###### Don't 
+##### Don't 
 
 ```cs
 List<Student> washgintonSchoolsStudentsWithGrades = await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
@@ -148,7 +148,7 @@ List<Student> washgintonSchoolsStudentsWithGrades = await GetAllWashingtonSchool
 
 Declarations that occupy two lines or more should have a new line before and after them to separate them from previous and next variables declarations.
 
-###### Do
+##### Do
 
 ```cs
 Student student = GetStudent();
@@ -159,7 +159,7 @@ List<Student> washgintonSchoolsStudentsWithGrades =
 School school = await GetSchoolAsync();
 ```
 
-###### Don't
+##### Don't
 
 ```cs
 Student student = GetStudent();
@@ -170,14 +170,14 @@ School school = await GetSchoolAsync();
 
 Also, declarations of variables that are of only one line should have no new lines between them.
 
-###### Do
+##### Do
 
 ```cs
 Student student = GetStudent();
 School school = await GetSchoolAsync();
 ```
 
-###### Don't
+##### Don't
 
 ```cs
 Student student = GetStudent();
