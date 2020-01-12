@@ -15,7 +15,8 @@ public List<Student> GetStudents()
 ```
 ##### Don't
 ```cs
-public List<Student> Students(){
+public List<Student> Students()
+{
 	...
 }
 ```
@@ -33,6 +34,25 @@ public async ValueTask<List<Student> GetStudentsAsync()
 ##### Don't
 ```cs
 public async ValueTask<List<Student> GetStudents()
+{
+	...
+}
+```
+<br />
+
+#### 1.0.2 Action Parameters
+If your method is performing an action with a particular parameter specify it.
+##### Do
+```cs
+public async ValueTask<Student> GetStudentByIdAsync(Guid studentId)
+{
+	...
+}
+
+```
+##### Don't
+```cs
+public async ValueTask<Student> GetStudentAsync(Guid studentId)
 {
 	...
 }
