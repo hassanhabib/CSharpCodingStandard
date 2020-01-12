@@ -93,4 +93,58 @@ var student = new
     Score = 100
 };
 ```
+<br /> <br />
+
+### 0.2 Organization
+
+#### 0.2.0 Breakdown
+If a variable declaration exceeds 120 characters, break it down starting from the equal sign.
+
+###### Do
+```cs
+List<Student> washgintonSchoolsStudentsWithGrades = 
+    await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
+
+```
+###### Don't 
+```cs
+List<Student> washgintonSchoolsStudentsWithGrades = await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
+```
+<br />
+
+#### 0.2.1 Multiple Decalarions
+Declarations that occupy two lines or more should have a new line before and after them to separate them from previous and next variables declarations.
+
+###### Do
+```cs
+Student student = GetStudent();
+
+List<Student> washgintonSchoolsStudentsWithGrades = 
+    await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
+
+School school = await GetSchoolAsync();
+```
+
+###### Don't
+```cs
+Student student = GetStudent();
+List<Student> washgintonSchoolsStudentsWithGrades = 
+    await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
+School school = await GetSchoolAsync();
+```
+Also, declarations of variables that are of only one line should have no new lines between them.
+
+###### Do
+```cs
+Student student = GetStudent();
+School school = await GetSchoolAsync();
+```
+
+###### Don't
+```cs
+Student student = GetStudent();
+
+School school = await GetSchoolAsync();
+
+```
 <br />
