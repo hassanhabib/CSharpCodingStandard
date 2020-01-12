@@ -3,89 +3,119 @@
 ## 0. Variables
 
 ### 0.0 Naming
+
 Variable names should be concise and representative of nature and the quantity of the value it holds or will potentially hold.
 
 #### 0.0.0 Names
+
 ##### Do
+
 ```cs
 var student = new Student();
 ```
+
 ##### Don't
+
 ```cs
 var s = new Student();
 ```
+
 ##### Also, Don't
+
 ```cs
 var stdnt = new Student();
 ```
 
 The same rule applies to lambda expressions:
+
 ##### Do
+
 ```cs
 students.Where(student => student ... );
 ```
+
 ##### Don't
+
 ```cs
 studetns.Where(s => s ... );
 ```
-<br />
 
-#### 0.0.1 Plurals 
+#### 0.0.1 Plurals
+
 ##### Do
+
 ```cs
 var students = new List<Student>();
 ```
+
 ##### Don't
+
 ```cs
 var studentList = new List<Student>();
 ```
-<br />
 
 #### 0.0.2 Names with Types
 
 ##### Do
+
 ```cs
 var student = new Student();
 ```
+
 ##### Don't
+
 ```cs
 var studentModel = new Student();
 ```
+
 ##### Also, Don't
+
 ```cs
 var studentObj = new Student();
 ```
-<br /> <br />
 
 ### 0.1 Declarations
+
 Declaring a variable and instantiating it should indicate the immediate type of the variable, even if the value is to be determined later.
+
 #### 0.1.0 Clear Types
-If the right side type is clear, then use ```var``` to declare your variable
+
+If the right side type is clear, then use ```var``` to declare your variable.
+
 ##### Do
+
 ```cs
 var student = new Student();
 ```
+
 ##### Don't
+
 ```cs
 Student student = new Student();
 ````
-<br />
 
 #### 0.1.1 Semi-Clear Types
+
 If the right side isn't clear (but known) of the returned value type, then you must explicitly declare your variable with it's type.
+
 ##### Do
+
 ```cs
 Student student = GetStudent();
 ```
+
 ##### Don't
+
 ```cs
 var student = GetStudent();
 ```
-<br />
 
 #### 0.1.2 Unclear Types 
+
 If the right side isn't clear and unknown (such as an anonymous types) of the returned value type, you may use ```var``` as your variable type.
+
 ##### Do
+
 ```cs
 var student = new
 {
@@ -93,29 +123,33 @@ var student = new
     Score = 100
 };
 ```
-<br /> <br />
 
 ### 0.2 Organization
 
 #### 0.2.0 Breakdown
+
 If a variable declaration exceeds 120 characters, break it down starting from the equal sign.
 
 ###### Do
+
 ```cs
 List<Student> washgintonSchoolsStudentsWithGrades = 
     await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 
 ```
+
 ###### Don't 
+
 ```cs
 List<Student> washgintonSchoolsStudentsWithGrades = await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 ```
-<br />
 
 #### 0.2.1 Multiple Decalarions
+
 Declarations that occupy two lines or more should have a new line before and after them to separate them from previous and next variables declarations.
 
 ###### Do
+
 ```cs
 Student student = GetStudent();
 
@@ -126,25 +160,28 @@ School school = await GetSchoolAsync();
 ```
 
 ###### Don't
+
 ```cs
 Student student = GetStudent();
 List<Student> washgintonSchoolsStudentsWithGrades = 
     await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 School school = await GetSchoolAsync();
 ```
+
 Also, declarations of variables that are of only one line should have no new lines between them.
 
 ###### Do
+
 ```cs
 Student student = GetStudent();
 School school = await GetSchoolAsync();
 ```
 
 ###### Don't
+
 ```cs
 Student student = GetStudent();
 
 School school = await GetSchoolAsync();
 
 ```
-<br />
