@@ -14,8 +14,12 @@ var student = new Student();
 ```cs
 var s = new Student();
 ```
+##### Also, Don't
+```cs
+var stdnt = new Student();
+```
 
-The same applies to lambda expressions:
+The same rule applies to lambda expressions:
 ##### Do
 ```cs
 students.Where(student => student ... );
@@ -47,7 +51,12 @@ var student = new Student();
 ```cs
 var studentModel = new Student();
 ```
+##### Also, Don't
+```cs
+var studentObj = new Student();
+```
 <br /> <br />
+
 ### 0.1 Declarations
 Declaring a variable and instantiating it should indicate the immediate type of the variable, even if the value is to be determined later.
 #### 0.1.0 Clear Types
@@ -60,7 +69,6 @@ var student = new Student();
 ```cs
 Student student = new Student();
 ````
-
 <br />
 
 #### 0.1.1 Semi-Clear Types
@@ -73,17 +81,16 @@ Student student = GetStudent();
 ```cs
 var student = GetStudent();
 ```
-
 <br />
 
 #### 0.1.2 Unclear Types 
-If the right side isn't clear and unknown (such as an API call) of the returned value type, you may use ```var``` as your variable type.
+If the right side isn't clear and unknown (such as an anonymous types) of the returned value type, you may use ```var``` as your variable type.
 ##### Do
 ```cs
-var student = await GetStudentAsync();
+var student = new
+{
+    Name = "Hassan",
+    Score = 100
+};
 ```
-
-#### Don't
-```cs
-HttpResponseMessage student = await httpClient.GetAsync("https:// ... ");
-``` 
+<br />
