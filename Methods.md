@@ -40,7 +40,32 @@ public async ValueTask<List<Student> GetStudents()
 ```
 <br />
 
-#### 1.0.2 Action Parameters
+#### 1.0.2 Input Parameters
+Input parameters should be explicit about what property of an object they will be assigned to, or will be used for any action such as search.
+##### Do
+```cs
+public async ValueTask<Student> GetStudentByNameAsync(string studentName)
+{
+	...
+}
+```
+##### Don't
+```cs
+public async ValueTask<Student> GetStudentByNameAsync(string text)
+{
+	...
+}
+```
+##### Also, Don't
+```cs
+public async ValueTask<Student> GetStudentByNameAsync(string name)
+{
+	...
+}
+```
+<br />
+
+#### 1.0.3 Action Parameters
 If your method is performing an action with a particular parameter specify it.
 ##### Do
 ```cs
@@ -57,3 +82,4 @@ public async ValueTask<Student> GetStudentAsync(Guid studentId)
 	...
 }
 ```
+<br />
