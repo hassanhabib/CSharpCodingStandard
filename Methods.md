@@ -162,7 +162,7 @@ public List<Student> GetStudents(){
 
 ```cs
 public List<Student> GetStudents(){
-	StudentsClient washgintonSchoolsStudentsApiClient = 
+	StudentsClient washingtonSchoolsStudentsApiClient = 
 		await InitializeWashingtonSchoolsStudentsApiClientAsync();
 
 	List<Student> students = studetnsApiClient.GetStudents();
@@ -174,7 +174,7 @@ public List<Student> GetStudents(){
 
 ```cs
 public List<Student> GetStudents(){
-	StudentsClient washgintonSchoolsStudentsApiClient = 
+	StudentsClient washingtonSchoolsStudentsApiClient = 
 		await InitializeWashingtonSchoolsStudentsApiClientAsync();
 	List<Student> students = studetnsApiClient.GetStudents();
 
