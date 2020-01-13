@@ -55,6 +55,27 @@ var studentModel = new Student();
 ```cs
 var studentObj = new Student();
 ```
+<br />
+
+#### 0.0.3 Nulls or Defaults
+If a variable value is it's default such as ```0``` for ```int``` or ```null``` for strings and you are not planning on changing that value (for testing purposes for instance) then the name should identify that value. 
+##### Do
+```cs
+Student noStudent = null;
+```
+##### Don't
+```cs
+Student student = null;
+```
+##### Also, Do
+```cs
+int noChangeCount = 0;
+```
+
+##### But, Dont'
+```cs
+int changeCount = 0;
+```
 <br /> <br />
 
 ### 0.1 Declarations
