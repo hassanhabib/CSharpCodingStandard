@@ -112,7 +112,7 @@ List<Student> washgintonSchoolsStudentsWithGrades = await GetAllWashingtonSchool
 ```
 <br />
 
-#### 0.2.1 Multiple Decalarions
+#### 0.2.1 Multiple Declarations
 Declarations that occupy two lines or more should have a new line before and after them to separate them from previous and next variables declarations.
 
 ##### Do
