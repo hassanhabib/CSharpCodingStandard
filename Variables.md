@@ -123,7 +123,7 @@ If a variable declaration exceeds 120 characters, break it down starting from th
 
 ##### Do
 ```cs
-List<Student> washgintonSchoolsStudentsWithGrades = 
+List<Student> washingtonSchoolsStudentsWithGrades = 
     await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 
 ```
@@ -140,7 +140,7 @@ Declarations that occupy two lines or more should have a new line before and aft
 ```cs
 Student student = GetStudent();
 
-List<Student> washgintonSchoolsStudentsWithGrades = 
+List<Student> washingtonSchoolsStudentsWithGrades = 
     await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 
 School school = await GetSchoolAsync();
