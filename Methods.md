@@ -82,4 +82,55 @@ public async ValueTask<Student> GetStudentAsync(Guid studentId)
 	...
 }
 ```
+<br /><br />
+
+### 1.1 Organization
+In general encapsulate multiple lines of the same logic into their own method, and keep your method at level 0 of details at all times.
+
+#### 1.1.0 One-Liners
+Any method that contains only one line of code should use fat arrows
+##### Do
+```cs
+public List<Student> GetStudents() => this.storageBroker.GetStudents();
+
+```
+##### Don't
+```cs
+public List<Student> Students()
+{
+	return this.storageBroker.GetStudents();
+}
+```
+
+If a one-liner method exceeds the length of 120 characters then break after the fat arrow with an extra tab for the new line.
+
+##### Do
+```cs
+public async ValueTask<List<Student>> GetAllWashingtonSchoolsStudentsAsync() => 
+	await this.storageBroker.GetStudentsAsync();
+```
+
+##### Don't
+```cs
+public async ValueTask<List<Student>> GetAllWashingtonSchoolsStudentsAsync() => await this.storageBroker.GetStudentsAsync();
+```
 <br />
+
+#### 1.1.1 Returns
+For multi-liner methods, take a new line between the method logic and the final return line (if any).
+##### Do
+```cs
+public List<Student> GetStudents(){
+	StudentsClient studentsApiClient = InitializeStudentApiClient();
+
+	return studetnsApiClient.GetStudents();
+}
+```
+
+##### Don't
+```cs
+public List<Student> GetStudents(){
+	StudentsClient studentsApiClient = InitializeStudentApiClient();
+	return studetnsApiClient.GetStudents();
+}
+```
