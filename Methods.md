@@ -134,3 +134,50 @@ public List<Student> GetStudents(){
 	return studetnsApiClient.GetStudents();
 }
 ```
+<br />
+
+#### 1.1.2 Multiple Calls
+With mutliple method calls, if both calls are less than 120 characters then they may stack unless the final call is a method return, otherwise separate with a new line.
+##### Do
+```cs
+public List<Student> GetStudents(){
+	StudentsClient studentsApiClient = InitializeStudentApiClient();
+	List<Student> students = studetnsApiClient.GetStudents();
+
+	return students; 
+}
+```
+
+##### Don't
+```cs
+public List<Student> GetStudents(){
+	StudentsClient studentsApiClient = InitializeStudentApiClient();
+
+	List<Student> students = studetnsApiClient.GetStudents();
+
+	return students; 
+}
+```
+##### Also, Do
+
+```cs
+public List<Student> GetStudents(){
+	StudentsClient washgintonSchoolsStudentsApiClient = 
+		await InitializeWashingtonSchoolsStudentsApiClientAsync();
+
+	List<Student> students = studetnsApiClient.GetStudents();
+
+	return students; 
+}
+```
+##### Don't
+
+```cs
+public List<Student> GetStudents(){
+	StudentsClient washgintonSchoolsStudentsApiClient = 
+		await InitializeWashingtonSchoolsStudentsApiClientAsync();
+	List<Student> students = studetnsApiClient.GetStudents();
+
+	return students; 
+}
+```
