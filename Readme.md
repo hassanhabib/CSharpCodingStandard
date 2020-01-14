@@ -10,7 +10,7 @@ Menu
 - [Variables](Variables.md)
 - [Methods](Methods.md)
 - Interfaces
-- Classes
+- [Classes](Classes.md)
 - Enums
 - Structs
 - Exceptions
