@@ -13,4 +13,5 @@ Menu
 - Classes
 - Enums
 - Structs
+- Exceptions
 - Solution Organization
