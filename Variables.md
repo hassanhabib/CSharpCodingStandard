@@ -1,5 +1,3 @@
-# The Standard
-
 ## 0. Variables
 
 ### 0.0 Naming
