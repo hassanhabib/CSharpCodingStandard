@@ -1,5 +1,3 @@
-# The Standard
-
 ## 0. Variables
 
 ### 0.0 Naming
@@ -74,6 +72,34 @@ var studentModel = new Student();
 var studentObj = new Student();
 ```
 
+#### 0.0.3 Nulls or Defaults
+
+If a variable value is it's default such as ```0``` for ```int``` or ```null``` for strings and you are not planning on changing that value (for testing purposes for instance) then the name should identify that value. 
+
+##### Do
+
+```cs
+Student noStudent = null;
+```
+
+##### Don't
+
+```cs
+Student student = null;
+```
+
+##### Also, Do
+
+```cs
+int noChangeCount = 0;
+```
+
+##### But, Don,t
+
+```cs
+int changeCount = 0;
+```
+
 ### 0.1 Declarations
 
 Declaring a variable and instantiating it should indicate the immediate type of the variable, even if the value is to be determined later.
@@ -133,18 +159,18 @@ If a variable declaration exceeds 120 characters, break it down starting from th
 ##### Do
 
 ```cs
-List<Student> washgintonSchoolsStudentsWithGrades =
+List<Student> washingtonSchoolsStudentsWithGrades = 
     await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 
 ```
 
-##### Don't
+##### Don't 
 
 ```cs
 List<Student> washgintonSchoolsStudentsWithGrades = await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 ```
 
-#### 0.2.1 Multiple Decalarions
+#### 0.2.1 Multiple Declarations
 
 Declarations that occupy two lines or more should have a new line before and after them to separate them from previous and next variables declarations.
 
@@ -153,7 +179,7 @@ Declarations that occupy two lines or more should have a new line before and aft
 ```cs
 Student student = GetStudent();
 
-List<Student> washgintonSchoolsStudentsWithGrades =
+List<Student> washingtonSchoolsStudentsWithGrades = 
     await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 
 School school = await GetSchoolAsync();
