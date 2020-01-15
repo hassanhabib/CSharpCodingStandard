@@ -221,3 +221,26 @@ public List<Student> GetStudents()
 	return students;
 }
 ```
+
+#### 1.1.3 Declaration
+
+A method declaration should not be longer than 120 characters.
+
+##### Do
+
+```cs
+public async ValueTask<List<Student>> GetAllRegisteredWashgintonSchoolsStudentsAsync(
+	StudentsQuery studentsQuery)
+{
+	...
+}
+```
+
+##### Don't
+
+```cs
+public async ValueTask<List<Student>> GetAllRegisteredWashgintonSchoolsStudentsAsync(StudentsQuery studentsQuery)
+{
+	...
+}
+```
