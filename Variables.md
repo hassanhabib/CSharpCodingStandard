@@ -74,7 +74,7 @@ var studentObj = new Student();
 
 #### 0.0.3 Nulls or Defaults
 
-If a variable value is it's default such as ```0``` for ```int``` or ```null``` for strings and you are not planning on changing that value (for testing purposes for instance) then the name should identify that value. 
+If a variable value is it's default such as ```0``` for ```int``` or ```null``` for strings and you are not planning on changing that value (for testing purposes for instance) then the name should identify that value.
 
 ##### Do
 
@@ -159,12 +159,12 @@ If a variable declaration exceeds 120 characters, break it down starting from th
 ##### Do
 
 ```cs
-List<Student> washingtonSchoolsStudentsWithGrades = 
+List<Student> washingtonSchoolsStudentsWithGrades =
     await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 
 ```
 
-##### Don't 
+##### Don't
 
 ```cs
 List<Student> washgintonSchoolsStudentsWithGrades = await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
@@ -179,7 +179,7 @@ Declarations that occupy two lines or more should have a new line before and aft
 ```cs
 Student student = GetStudent();
 
-List<Student> washingtonSchoolsStudentsWithGrades = 
+List<Student> washingtonSchoolsStudentsWithGrades =
     await GetAllWashingtonSchoolsStudentsWithTheirGradesAsync();
 
 School school = await GetSchoolAsync();
