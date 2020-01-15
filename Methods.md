@@ -131,7 +131,7 @@ If a one-liner method exceeds the length of 120 characters then break after the 
 ##### Do
 
 ```cs
-public async ValueTask<List<Student>> GetAllWashingtonSchoolsStudentsAsync() => 
+public async ValueTask<List<Student>> GetAllWashingtonSchoolsStudentsAsync() =>
 	await this.storageBroker.GetStudentsAsync();
 ```
 
@@ -148,7 +148,8 @@ For multi-liner methods, take a new line between the method logic and the final 
 ##### Do
 
 ```cs
-public List<Student> GetStudents(){
+public List<Student> GetStudents()
+{
 	StudentsClient studentsApiClient = InitializeStudentApiClient();
 
 	return studetnsApiClient.GetStudents();
@@ -158,7 +159,8 @@ public List<Student> GetStudents(){
 ##### Don't
 
 ```cs
-public List<Student> GetStudents(){
+public List<Student> GetStudents()
+{
 	StudentsClient studentsApiClient = InitializeStudentApiClient();
 	return studetnsApiClient.GetStudents();
 }
@@ -171,47 +173,51 @@ With mutliple method calls, if both calls are less than 120 characters then they
 ##### Do
 
 ```cs
-public List<Student> GetStudents(){
+public List<Student> GetStudents()
+{
 	StudentsClient studentsApiClient = InitializeStudentApiClient();
 	List<Student> students = studetnsApiClient.GetStudents();
 
-	return students; 
+	return students;
 }
 ```
 
 ##### Don't
 
 ```cs
-public List<Student> GetStudents(){
+public List<Student> GetStudents()
+{
 	StudentsClient studentsApiClient = InitializeStudentApiClient();
 
 	List<Student> students = studetnsApiClient.GetStudents();
 
-	return students; 
+	return students;
 }
 ```
 
 ##### Also, Do
 
 ```cs
-public List<Student> GetStudents(){
-	StudentsClient washingtonSchoolsStudentsApiClient = 
+public List<Student> GetStudents()
+{
+	StudentsClient washingtonSchoolsStudentsApiClient =
 		await InitializeWashingtonSchoolsStudentsApiClientAsync();
 
 	List<Student> students = studetnsApiClient.GetStudents();
 
-	return students; 
+	return students;
 }
 ```
 
 ##### Don't
 
 ```cs
-public List<Student> GetStudents(){
-	StudentsClient washingtonSchoolsStudentsApiClient = 
+public List<Student> GetStudents()
+{
+	StudentsClient washingtonSchoolsStudentsApiClient =
 		await InitializeWashingtonSchoolsStudentsApiClientAsync();
 	List<Student> students = studetnsApiClient.GetStudents();
 
-	return students; 
+	return students;
 }
 ```
