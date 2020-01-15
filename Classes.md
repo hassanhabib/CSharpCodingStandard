@@ -48,7 +48,7 @@ class StudentsService
 
 ##### Also, Don't
 
-```cs 
+```cs
 class StudetnBusinessLogic
 {
 	...
@@ -147,7 +147,6 @@ Should follow the same rules for naming as mentioned in the Variables sections.
 
 #### 4.1.1 Referencing
 
-
 When referencing a class private field, use ```this``` keyword to distinguish private class member from a scoped method or constructor level variable.
 
 ##### Do
@@ -156,7 +155,7 @@ When referencing a class private field, use ```this``` keyword to distinguish pr
 class StudentsController
 {
 	private readonly string studentName;
-	
+
 	public StudentsController(string studentName)
 	{
 		this.studentName = studentName;
