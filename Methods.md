@@ -82,6 +82,25 @@ public async ValueTask<Student> GetStudentAsync(Guid studentId)
 	...
 }
 ```
+<br />
+
+#### 1.0.4 Passing Parameters
+When utilizing a method, if the input parameters aliases matches the passed in variables, then you don't have to use the aliases, otherwise you must specify your values with aliases.
+##### Do
+```cs
+string studentName = "Todd";
+Student student = await GetStudentByNameAsync(studentName);
+
+```
+##### Also, Do
+```cs
+Student student = await GetStudentByNameAsync(studentName: "Todd");
+```
+##### Don't
+```cs
+Student student = await GetStudentByNameAsync("Todd");
+```
+
 <br /><br />
 
 ### 1.1 Organization
@@ -200,4 +219,20 @@ public async ValueTask<List<Student>> GetAllRegisteredWashgintonSchoolsStudentsA
 {
 	...
 }
+```
+<br />
+
+#### 1.1.4 Multiple Parameters
+If you are passing multiple parameters, and the length of the method call is over 120 characters, you must break by the parameters, with **one** parameter on each line.
+##### Do
+```cs
+List<Student> redmondHighStudents = await QueryAllWashingtonStudentsByScoreAndSchoolAsync(
+	MinimumScore: 130,
+	SchoolName: "Redmond High");
+```
+
+##### Don't
+```cs
+List<Student> redmondHighStudents = await QueryAllWashingtonStudentsByScoreAndSchoolAsync(
+	MinimumScore: 130,SchoolName: "Redmond High");
 ```
