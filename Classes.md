@@ -176,3 +176,33 @@ class StudentController
 	}
 }
 ```
+
+### 4.2 Instantiations
+
+#### 4.2.0 Input Params Aliases
+
+If the input variables names match to input aliases, then use them, otherwise you must use the aliases, especially with values passed in.
+
+##### Do
+
+```cs
+int score = 150;
+string name = "Josh";
+
+var student = new Student(name, score);
+
+```
+
+##### Also, Do
+
+```cs
+var student = new Student(name: "Josh", score: 150);
+
+```
+
+##### But, Don't
+
+```cs
+var student = new Student("Josh", 150);
+
+```
