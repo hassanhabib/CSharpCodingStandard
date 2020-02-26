@@ -34,7 +34,7 @@ class StudentsService{
 ```
 ##### Also, Don't
 ```cs 
-class StudetnBusinessLogic {
+class StudentBusinessLogic {
 	...
 }
 ```
