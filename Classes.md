@@ -142,7 +142,7 @@ var student = new Student(name, score);
 
 ```
 
-##### Alos, Do
+##### Also, Do
 ```cs
 var student = new Student(name: "Josh", score: 150);
 
