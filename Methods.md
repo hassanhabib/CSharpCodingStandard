@@ -1,7 +1,7 @@
 ## 1 Methods
 
 ### 1.0 Naming
-Method names should be a summary of what the method is doing, it needs to stay percise and short and representative of the operation with respect to synchrony.
+Method names should be a summary of what the method is doing, it needs to stay precise and short and representative of the operation with respect to synchrony.
 
 #### 1.0.0 Verbs
 Method names must contain verbs in them to represent the action it performs.
