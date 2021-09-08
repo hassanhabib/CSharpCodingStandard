@@ -113,6 +113,11 @@ Student student = await GetStudentByNameAsync(toddName);
 Student student = await GetStudentByNameAsync("Todd");
 ```
 
+##### Don't
+```cs
+Student student = await GetStudentByNameAsync(todd);
+```
+
 <br /><br />
 
 ### 1.1 Organization
