@@ -85,7 +85,13 @@ public async ValueTask<Student> GetStudentAsync(Guid studentId)
 <br />
 
 #### 1.0.4 Passing Parameters
-When utilizing a method, if the input parameters aliases matches the passed in variables, then you don't have to use the aliases, otherwise you must specify your values with aliases.
+When utilizing a method, if the input parameters aliases match the passed in variables in part or in full, then you don't have to use the aliases, otherwise you must specify your values with aliases.
+
+Assume you have a method:
+```csharp
+Student GetStudentByNameAsync(string studentName);
+```
+
 ##### Do
 ```cs
 string studentName = "Todd";
@@ -96,6 +102,12 @@ Student student = await GetStudentByNameAsync(studentName);
 ```cs
 Student student = await GetStudentByNameAsync(studentName: "Todd");
 ```
+
+##### Also, Do
+```cs
+Student student = await GetStudentByNameAsync(toddName);
+```
+
 ##### Don't
 ```cs
 Student student = await GetStudentByNameAsync("Todd");
