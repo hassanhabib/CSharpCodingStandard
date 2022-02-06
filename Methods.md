@@ -159,7 +159,7 @@ For multi-liner methods, take a new line between the method logic and the final 
 public List<Student> GetStudents(){
 	StudentsClient studentsApiClient = InitializeStudentApiClient();
 
-	return studetnsApiClient.GetStudents();
+	return studentsApiClient.GetStudents();
 }
 ```
 
@@ -167,7 +167,7 @@ public List<Student> GetStudents(){
 ```cs
 public List<Student> GetStudents(){
 	StudentsClient studentsApiClient = InitializeStudentApiClient();
-	return studetnsApiClient.GetStudents();
+	return studentsApiClient.GetStudents();
 }
 ```
 <br />
@@ -178,7 +178,7 @@ With mutliple method calls, if both calls are less than 120 characters then they
 ```cs
 public List<Student> GetStudents(){
 	StudentsClient studentsApiClient = InitializeStudentApiClient();
-	List<Student> students = studetnsApiClient.GetStudents();
+	List<Student> students = studentsApiClient.GetStudents();
 
 	return students; 
 }
@@ -189,7 +189,7 @@ public List<Student> GetStudents(){
 public List<Student> GetStudents(){
 	StudentsClient studentsApiClient = InitializeStudentApiClient();
 
-	List<Student> students = studetnsApiClient.GetStudents();
+	List<Student> students = studentsApiClient.GetStudents();
 
 	return students; 
 }
@@ -201,7 +201,7 @@ public List<Student> GetStudents(){
 	StudentsClient washingtonSchoolsStudentsApiClient = 
 		await InitializeWashingtonSchoolsStudentsApiClientAsync();
 
-	List<Student> students = studetnsApiClient.GetStudents();
+	List<Student> students = studentsApiClient.GetStudents();
 
 	return students; 
 }
@@ -212,7 +212,7 @@ public List<Student> GetStudents(){
 public List<Student> GetStudents(){
 	StudentsClient washingtonSchoolsStudentsApiClient = 
 		await InitializeWashingtonSchoolsStudentsApiClientAsync();
-	List<Student> students = studetnsApiClient.GetStudents();
+	List<Student> students = studentsApiClient.GetStudents();
 
 	return students; 
 }
