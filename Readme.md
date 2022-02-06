@@ -1,4 +1,4 @@
-## The Standard
+## The C# Coding Standard
 Guidelines for C# coding styles.
 
 
