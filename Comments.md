@@ -1,0 +1,45 @@
+## 12 Comments
+
+### 12.0 Introudction
+Comments can only be used to explain what code can't. Whether the code is visible or not.
+
+### 12.1 Copyrights
+Comments highlighting copyrights should follow this pattern:
+
+##### Do
+```csharp
+    // ---------------------------------------------------------------
+    // Copyright (c) Coalition of the Good-Hearted Engineers
+    // FREE TO USE TO CONNECT THE WORLD
+    // ---------------------------------------------------------------
+```
+
+##### Don't
+```csharp
+
+    //----------------------------------------------------------------
+    // <copyright file="StudentService.cs" company="OpenSource">
+    //      Copyright (C) Coalition of the Good-Hearted Engineers
+    // </copyright>
+    //----------------------------------------------------------------
+
+```
+
+##### Also, Don't
+```csharp
+   /* 
+    * ==============================================================
+    * Copyright (c) Coalition of the Good-Hearted Engineers
+    * FREE TO USE TO CONNECT THE WORLD
+    * ==============================================================
+    */
+```
+
+### 12.2 Methods
+Methods that have code that is not accessible at dev-time, or perform a complex function should contain the following details in their documentation.
+
+- Purposing
+- Incomes
+- Outcomes
+
+

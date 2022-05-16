@@ -253,3 +253,43 @@ List<Student> redmondHighStudents = await QueryAllWashingtonStudentsByScoreAndSc
 List<Student> redmondHighStudents = await QueryAllWashingtonStudentsByScoreAndSchoolAsync(
 	MinimumScore: 130,SchoolName: "Redmond High");
 ```
+
+#### 1.1.5 Chaining (Uglification/Beautification)
+Some methods offer extensions to call other methods. For instance, you can call a `Select()` method after a `Where()` method. And so on until a full query is completed.
+
+We will follow a process of Uglification Beautification. We uglify our code to beautify our view of a chain methods. Here's some examples:
+
+##### Do
+```csharp
+	students.Where(student => student.Name is "Elbek")
+		.Select(student => student.Name)
+			.ToList();
+```
+
+##### Don't
+```csharp
+	students
+	.Where(student => student.Name is "Elbek")
+	.Select(student => student.Name)
+	.ToList();
+```
+
+The first approach enforces simplifying and cutting the chaining short as more calls continues to uglify the code like this:
+
+```csharp
+	students.SomeMethod(...)
+		.SomeOtherMethod(...)
+			.SomeOtherMethod(...)
+				.SomeOtherMethod(...)
+					.SomeOtherMethod(...);
+```
+The uglification process forces breaking down the chains to smaller lists then processing it. The second approach (no uglification approach) may require additional cognitive resources to distinguish between a new statement and an existing one as follows:
+
+```csharp
+	student
+	.Where(student => student.Name is "Elbek")
+	.Select(student => student.Name)
+	.OrderBy(student => student.Name)
+	.ToList();
+	ProcessStudents(students);
+```
