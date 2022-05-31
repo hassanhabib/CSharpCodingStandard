@@ -26,14 +26,14 @@ public List<Student> Students()
 Asynchronous methods should be postfixed by the term ```Async``` such as methods returning ```Task``` or ```ValueTask``` in general.
 ##### Do
 ```cs
-public async ValueTask<List<Student> GetStudentsAsync()
+public async ValueTask<List<Student>> GetStudentsAsync()
 {
 	...
 }
 ```
 ##### Don't
 ```cs
-public async ValueTask<List<Student> GetStudents()
+public async ValueTask<List<Student>> GetStudents()
 {
 	...
 }
